@@ -1,0 +1,222 @@
+Script iniziato su dom 30 mag 2010 16:47:19 CEST
+]0;giu@giu-laptop: ~/railsproj/demo_appgiu@giu-laptop:~/railsproj/demo_app$ ^C
+]0;giu@giu-laptop: ~/railsproj/demo_appgiu@giu-laptop:~/railsproj/demo_app$ git clone git://git.kernel.org/pub/scm/git/ggit.git[A]0;giu@giu-laptop: ~/railsproj/demo_appgiu@giu-laptop:~/railsproj/demo_app$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit clone git://git.kernel.org/pub/scm/git/ggit.git[A]0;giu@giu-laptop: ~/railsproj/demo_appgiu@giu-laptop:~/railsproj/demo_app$ [8Psudo make prefix=/usr/local install
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit clone git://git.kernel.org/pub/scm/git/ggit.git[A]0;giu@giu-laptop: ~/railsproj/demo_appgiu@giu-laptop:~/railsproj/demo_app$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cscript/server
+=> Booting WEBrick
+=> Rails 2.3.8 application starting on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2010-05-30 16:49:26] INFO  WEBrick 1.3.1
+[2010-05-30 16:49:26] INFO  ruby 1.9.1 (2010-01-10) [x86_64-linux]
+[2010-05-30 16:49:31] INFO  WEBrick::HTTPServer#start: pid=9772 port=3000
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-30 16:50:15) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 75ms (View: 70, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-05-30 16:51:57) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-05-30 16:52:14) [POST]
+  Parameters: {"authenticity_token"=>"UH/JdduOMYRT1wk5taNUjM9mKQT7c/St16ju0cQJOF4=", "user"=>{"name"=>"Giuliano Regoli", "email"=>"giuregol@libero.it"}, "commit"=>"Create"}
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES('Giuliano Regoli', 'giuregol@libero.it', '2010-05-30 14:52:14', '2010-05-30 14:52:14')[0m
+Redirected to http://localhost:3000/users/1
+Completed in 124ms (DB: 0) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-30 16:52:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-30 16:52:20) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-05-30 16:52:23) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-05-30 16:52:38) [POST]
+  Parameters: {"authenticity_token"=>"UH/JdduOMYRT1wk5taNUjM9mKQT7c/St16ju0cQJOF4=", "user"=>{"name"=>"Pinco Pallino", "email"=>"pincopallino@pp.it"}, "commit"=>"Create"}
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES('Pinco Pallino', 'pincopallino@pp.it', '2010-05-30 14:52:38', '2010-05-30 14:52:38')[0m
+Redirected to http://localhost:3000/users/2
+Completed in 88ms (DB: 0) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-30 16:52:38) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/users/2]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-05-30 16:52:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 22ms (View: 17, DB: 0) | 200 OK [http://localhost/users/2/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-30 16:52:45) [GET]
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 62ms (View: 7, DB: 1) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100530144650)
+Migrating to CreateMicroposts (20100530152922)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100530152922')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("microposts")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-05-30 17:30:02) [GET]
+  [4;36;1mMicropost Load (0.4ms)[0m   [0;1mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 24ms (View: 19, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#new (for 127.0.0.1 at 2010-05-30 17:30:05) [GET]
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 21ms (View: 16, DB: 0) | 200 OK [http://localhost/microposts/new]
+
+
+Processing MicropostsController#new (for 127.0.0.1 at 2010-05-30 17:34:52) [GET]
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/microposts/new]
+
+
+Processing MicropostsController#create (for 127.0.0.1 at 2010-05-30 17:34:59) [POST]
+  Parameters: {"authenticity_token"=>"UH/JdduOMYRT1wk5taNUjM9mKQT7c/St16ju0cQJOF4=", "micropost"=>{"content"=>"fdsfds", "user_id"=>"1"}, "commit"=>"Create"}
+  [4;35;1mMicropost Create (0.3ms)[0m   [0mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES('fdsfds', 1, '2010-05-30 15:34:59', '2010-05-30 15:34:59')[0m
+Redirected to http://localhost:3000/microposts/1
+Completed in 87ms (DB: 0) | 302 Found [http://localhost/microposts]
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2010-05-30 17:34:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMicropost Load (0.2ms)[0m   [0;1mSELECT * FROM "microposts" WHERE ("microposts"."id" = 1) [0m
+Rendering template within layouts/microposts
+Rendering microposts/show
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/microposts/1]
+^C[2010-05-30 17:36:03] INFO  going to shutdown ...
+[2010-05-30 17:36:03] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;giu@giu-laptop: ~/railsproj/demo_appgiu@giu-laptop:~/railsproj/demo_app$ script/server
+=> Booting WEBrick
+=> Rails 2.3.8 application starting on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2010-05-30 17:36:10] INFO  WEBrick 1.3.1
+[2010-05-30 17:36:10] INFO  ruby 1.9.1 (2010-01-10) [x86_64-linux]
+[2010-05-30 17:36:20] INFO  WEBrick::HTTPServer#start: pid=10303 port=3000
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-05-30 17:36:22) [GET]
+  [4;36;1mMicropost Load (0.7ms)[0m   [0;1mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 33ms (View: 26, DB: 1) | 200 OK [http://localhost/microposts/]
+
+
+Processing MicropostsController#edit (for 127.0.0.1 at 2010-05-30 17:36:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMicropost Load (0.2ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts"."id" = 1) [0m
+Rendering template within layouts/microposts
+Rendering microposts/edit
+Completed in 23ms (View: 17, DB: 0) | 200 OK [http://localhost/microposts/1/edit]
+
+
+Processing MicropostsController#update (for 127.0.0.1 at 2010-05-30 17:36:27) [PUT]
+  Parameters: {"authenticity_token"=>"UH/JdduOMYRT1wk5taNUjM9mKQT7c/St16ju0cQJOF4=", "micropost"=>{"content"=>"fdsfds", "user_id"=>"1"}, "commit"=>"Update", "id"=>"1"}
+  [4;36;1mMicropost Load (0.2ms)[0m   [0;1mSELECT * FROM "microposts" WHERE ("microposts"."id" = 1) [0m
+Redirected to http://localhost:3000/microposts/1
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/microposts/1]
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2010-05-30 17:36:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMicropost Load (0.2ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts"."id" = 1) [0m
+Rendering template within layouts/microposts
+Rendering microposts/show
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/microposts/1]
+
+
+Processing MicropostsController#edit (for 127.0.0.1 at 2010-05-30 17:37:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMicropost Load (0.2ms)[0m   [0;1mSELECT * FROM "microposts" WHERE ("microposts"."id" = 1) [0m
+Rendering template within layouts/microposts
+Rendering microposts/edit
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/microposts/1/edit]
+
+
+Processing MicropostsController#update (for 127.0.0.1 at 2010-05-30 17:37:16) [PUT]
+  Parameters: {"authenticity_token"=>"UH/JdduOMYRT1wk5taNUjM9mKQT7c/St16ju0cQJOF4=", "micropost"=>{"content"=>"fdsfd", "user_id"=>"1"}, "commit"=>"Update", "id"=>"1"}
+  [4;35;1mMicropost Load (0.3ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts"."id" = 1) [0m
+  [4;36;1mMicropost Update (0.5ms)[0m   [0;1mUPDATE "microposts" SET "content" = 'fdsfd', "updated_at" = '2010-05-30 15:37:16' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/microposts/1
+Completed in 111ms (DB: 1) | 302 Found [http://localhost/microposts/1]
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2010-05-30 17:37:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMicropost Load (0.3ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts"."id" = 1) [0m
+Rendering template within layouts/microposts
+Rendering microposts/show
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/microposts/1]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-05-30 17:37:22) [GET]
+  [4;36;1mMicropost Load (0.5ms)[0m   [0;1mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#new (for 127.0.0.1 at 2010-05-30 17:38:05) [GET]
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/microposts/new]
+
+
+Processing MicropostsController#create (for 127.0.0.1 at 2010-05-30 17:38:09) [POST]
+  Parameters: {"authenticity_token"=>"UH/JdduOMYRT1wk5taNUjM9mKQT7c/St16ju0cQJOF4=", "micropost"=>{"content"=>"gfdgdf", "user_id"=>"1"}, "commit"=>"Create"}
+  [4;35;1mMicropost Create (0.5ms)[0m   [0mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES('gfdgdf', 1, '2010-05-30 15:38:09', '2010-05-30 
